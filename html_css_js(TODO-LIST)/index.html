@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="themeToggle">🌙</button>
+        <h1>🚀 Advanced To-Do List ✅</h1>
+
+        <!-- Task Input -->
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Enter your task...">
+            <input type="date" id="taskDate">
+            <select id="prioritySelect">
+                <option value="low">Low 🔵</option>
+                <option value="medium">Medium 🟡</option>
+                <option value="high">High 🔴</option>
+            </select>
+            <select id="categorySelect">
+                <option value="work">Work 🏢</option>
+                <option value="personal">Personal 💖</option>
+                <option value="study">Study 📚</option>
+            </select>
+            <button id="addTaskButton">Add</button>
+        </div>
+
+        <!-- Filters & Controls -->
+        <div class="filter-container">
+            <button id="filterAll">All</button>
+            <button id="filterPending">Pending</button>
+            <button id="filterCompleted">Completed</button>
+            <button id="filterPriority">Sort by Priority</button>
+            <button id="filterCategory">Sort by Category</button>
+        </div>
+
+        <!-- Task Statistics -->
+        <div class="stats">
+            <p>📊 Completed: <span id="completedCount">0</span> | ⏳ Pending: <span id="pendingCount">0</span></p>
+        </div>
+
+        <!-- Task List (Drag & Drop Enabled) -->
+        <ul id="todoList" class="sortable"></ul>
+
+        <!-- Export/Import -->
+        <div class="export-import">
+            <button id="exportTasks">📤 Export Tasks</button>
+            <input type="file" id="importTasks">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
